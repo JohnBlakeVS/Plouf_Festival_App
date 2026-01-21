@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { createClient } from "@/lib/supabase/client";
 
 // Types
@@ -106,17 +107,16 @@ export default function Home() {
         
         <div className="relative max-w-6xl mx-auto px-4 py-16 md:py-24">
           <div className="text-center">
-            {/* Logo placeholder - remplace par ton vrai logo */}
+            {/* Logo */}
             <div className="mb-8 flex justify-center">
-              <div 
-                className="w-48 h-48 md:w-64 md:h-64 rounded-2xl flex items-center justify-center text-6xl"
-                style={{ 
-                  background: "linear-gradient(180deg, #F1C26B 0%, #E6954A 33%, #C9483B 66%, #5B1F14 100%)",
-                }}
-              >
-                {/* Remplace par <Image src="/logo.png" ... /> */}
-                🪂
-              </div>
+              <Image 
+                src="/Plouf_Logo.png" 
+                alt="Le Plouf Festival"
+                width={256}
+                height={256}
+                className="w-48 h-48 md:w-64 md:h-64"
+                priority
+              />
             </div>
             
             <h1 
